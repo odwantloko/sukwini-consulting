@@ -43,12 +43,10 @@ export default ({
   subheading = "Our Track Record",
   heading = (
     <>
-      We have been doing this <wbr /> since <span tw="text-primary-500" style={{color:'#8fdff7'}} >1999.</span>
+      About <wbr />  <span tw="text-primary-500" style={{color:'#8fdff7'}} >Us</span>
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  primaryButtonText = "Learn More",
-  primaryButtonUrl = "https://timerse.com",
+  description = "With extensive industry experience relative to Human Resource Management, recruitment and mentoring, Sukwini Consulting provides you with the tools required to brand yourself in the world of work.",
   imageSrc = StatsIllustrationSrc,
   imageCss = null,
   imageContainerCss = null,
@@ -89,17 +87,7 @@ export default ({
             {subheading && <Subheading style={{color:'#8fdff7'}} >{subheading}</Subheading>}
             <Heading>{heading}</Heading>
             <Description>{description}</Description>
-            <Statistics>
-              {statistics.map((statistic, index) => (
-                <Statistic key={index}>
-                  <Value>{statistic.value}</Value>
-                  <Key>{statistic.key}</Key>
-                </Statistic>
-              ))}
-            </Statistics>
-            <PrimaryButton as="a" href={primaryButtonUrl}>
-              {primaryButtonText}
-            </PrimaryButton>
+            
           </TextContent>
         </TextColumn>
       </TwoColumn>
