@@ -65,30 +65,28 @@ export default () => {
   const cards = [
     {
       imageSrc: ShieldIconImage,
-      title: "Ads Management",
-      description: "We create and manage ads that you need, from creation to deployment. Lorem ipsum donor sit amet consicou."
+      title: "Career Coaching",
+      description: ""
     },
-    { imageSrc: SupportIconImage, title: "Video Marketing" },
-    { imageSrc: CustomizeIconImage, title: "Customer Relation" },
-    { imageSrc: ReliableIconImage, title: "Product Outreach" },
-    { imageSrc: FastIconImage, title: "PR Campaign" },
-    { imageSrc: SimpleIconImage, title: "Product Expansion" }
+    { title: "Performance Coaching" },
+    { imageSrc: ReliableIconImage, title: "CV Restructure & personal branding" },
+ 
   ];
 
   return (
     <Container>
       <ThreeColumnContainer>
-        <Heading>Our Professional <span tw="text-primary-500">Services</span></Heading>
+        <Heading>Our Professional <span tw="text-primary-500"   style={{color:'#8fdff7'}}>Services</span></Heading>
         {cards.map((card, i) => (
           <Column key={i}>
-            <Card>
-              <span className="imageContainer">
+            <Card    style={{color:'#8fdff7'}}>
+              <span className="imageContainer"> 
                 <img src={card.imageSrc || defaultCardImage} alt="" />
               </span>
               <span className="textContainer">
                 <span className="title">{card.title || "Fully Secure"}</span>
                 <p className="description">
-                  {card.description || "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud. Sic Semper Tyrannis. Neoas Calie artel."}
+                  {card.description || "You can add a sentence here if you want."}
                 </p>
               </span>
             </Card>
