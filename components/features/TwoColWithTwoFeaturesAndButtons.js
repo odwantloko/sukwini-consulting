@@ -46,38 +46,18 @@ const FeatureDescription = tw.div`mt-1 text-sm`;
 const PrimaryButton = tw(PrimaryButtonBase)`mt-8 md:mt-10 text-sm inline-block mx-auto md:mx-0`;
 
 export default ({
-  subheading = "Our Expertise",
   heading = (
     <>
-      We have the most <span tw="text-primary-500">professional</span> marketing team.
+     Our Expertise
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  description = "Our coaching, aimed at you putting your best foot forward in that interview coupled with further career development planning, helps you keep track in attaining your desired career level.",
   primaryButtonText = "See Our Portfolio",
   primaryButtonUrl = "https://timerse.com",
   features = null,
   textOnLeft = true
 }) => {
-  // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
 
-  /*
-   * Change the features variable as you like, add or delete objects
-   * `icon` must be a React SVG component. See how BriefcaseIcon is imported above. For a full list of available icons, see Feather Icons.
-   */
-  const defaultFeatures = [
-    {
-      Icon: BriefcaseIcon,
-      title: "Professionalism",
-      description: "We have the best professional marketing people across the globe just to work with you."
-    },
-    {
-      Icon: MoneyIcon,
-      title: "Affordable",
-      description: "We promise to offer you the best rate we can - at par with the industry standard."
-    }
-  ];
-
-  if (!features) features = defaultFeatures;
 
   return (
     <Container>
@@ -87,23 +67,9 @@ export default ({
         </ImageColumn>
         <TextColumn textOnLeft={textOnLeft}>
           <TextContent>
-            <Subheading>{subheading}</Subheading>
             <Heading>{heading}</Heading>
             <Description>{description}</Description>
-            <Features>
-              {features.map((feature, index) => (
-                <Feature key={index}>
-                  <FeatureIconContainer>{<feature.Icon />}</FeatureIconContainer>
-                  <FeatureText>
-                    <FeatureHeading>{feature.title}</FeatureHeading>
-                    <FeatureDescription>{feature.description}</FeatureDescription>
-                  </FeatureText>
-                </Feature>
-              ))}
-            </Features>
-            <PrimaryButton as="a" href={primaryButtonUrl}>
-              {primaryButtonText}
-            </PrimaryButton>
+            <Description>Don’t need coaching but somehow not getting responses on your applications? Let us assess your profile and make some recommendations so you can brand yourself well.</Description>
           </TextContent>
         </TextColumn>
       </TwoColumn>
