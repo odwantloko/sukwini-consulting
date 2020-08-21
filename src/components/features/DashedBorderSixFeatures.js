@@ -30,6 +30,9 @@ const Column = styled.div`
   ${tw`md:w-1/2 lg:w-1/3 px-6 flex`}
 `;
 
+const Row = tw.div`flex flex-col lg:flex-row -mb-10`;
+
+
 const Card = styled.div`
   ${tw`flex flex-col mx-auto max-w-xs items-center px-6 py-10 border-2 border-dashed border-primary-500 rounded-lg mt-12`}
   .imageContainer {
@@ -57,13 +60,7 @@ const DecoratorBlob = styled(SvgDecoratorBlob3)`
 `;
 
 export default () => {
-  /*
-   * This componets has an array of object denoting the cards defined below. Each object in the cards array can have the key (Change it according to your need, you can also add more objects to have more cards in this feature component):
-   *  1) imageSrc - the image shown at the top of the card
-   *  2) title - the title of the card
-   *  3) description - the description of the card
-   *  If a key for a particular card is not provided, a default value is used
-   */
+
 
   const cards = [
     {
@@ -88,19 +85,42 @@ export default () => {
 
       </>
     },
-    {
-      imageSrc: award,
-      title: "Performance Coaching",
-      description: <>One on One Career Clarity Coaching
-      <br/><b>Who is it for?</b><br/>A person that requires a detailed roadmap for their career.
-      <br/><b>What would you get?</b><br/>You would get clarity on what next steps to take in your career to land your dream job.
-
-
-      </>
-    },
     { 
       imageSrc: cv,
-      title: "CV Restructure & personal branding" 
+      title: "CV Restructure & personal branding",
+      description: 
+      <>
+        Your CV written from scratch with keywords which makes your CV standout and lands you a job.
+        <br/><b>Who is it for?</b><br/>Job seekers, Professionals, Graduates, Executives, Career Changers and anyone looking to accelerate their career.
+        <br/><b>What would you get?</b><br/>A standard and modern CV that makes you more attractive to recruiters.
+        <br/>
+        <br/><b><i>Entry Level Resume</i></b><br/>
+        <ul style={{textAlign:'Left'}}>
+          <li><b>Select this option if you have 0-2 years in the workforce.</b></li>
+          <li>•	 Phone consultation with one of our professional resume experts.</li>
+          <li>•  Proven resume format that gets employers’ attention.</li>
+          <li>•	 Personalized draft of your resume turned around within two business days of your consultation.</li>
+          <li>•  We will make two rounds of comprehensive revisions based on your feedback.</li>
+          <li>•  Your final, personalized resume will be emailed to you in Word and PDF formats.</li>
+        </ul>
+        <br/><b><i>Entry Level Resume</i></b><br/>
+        <ul style={{textAlign:'Left'}}>
+          <li><b>Select this option if you have 0-2 years in the workforce.</b></li>
+          <li>•	 Phone consultation with one of our professional resume experts.</li>
+          <li>•  Proven resume format that gets employers’ attention.</li>
+          <li>•	 Personalized draft of your resume turned around within two business days of your consultation.</li>
+          <li>•  We will make two rounds of comprehensive revisions based on your feedback.</li>
+          <li>•  Your final, personalized resume will be emailed to you in Word and PDF formats.</li>
+        </ul>
+      </>
+    },
+    {
+      imageSrc: award,
+      title: "Interview Preparation",
+      description: 
+      <>
+        Our interview preparation includes a 30-minute consultation with an interview expert. Have questions about how to prepare for the most common interview question, how to answer some of the most difficult interview questions, or even on what to wearur career to land your dream job.
+      </>
     }
  
   ];
@@ -109,21 +129,22 @@ export default () => {
     <Container>
       <ThreeColumnContainer>
         <Heading>Our Professional <span tw="text-primary-500"   style={{color:'#8fdff7'}}>Services</span></Heading>
-        {cards.map((card, i) => (
-          <Column key={i}>
-            <Card    style={{color:'#8fdff7'}}>
-              <span className="imageContainer"> 
-                <img src={card.imageSrc || defaultCardImage} alt="" />
-              </span>
-              <span className="textContainer">
-                <span className="title">{card.title || "Fully Secure"}</span>
-                <p className="description">
-                  {card.description }
-                </p>
-              </span>
-            </Card>
-          </Column>
-        ))}
+          {cards.map((card, i) => (
+
+              <Card  style={{color:'#8fdff7'}}>
+                <span className="imageContainer"> 
+                  <img src={card.imageSrc} alt="" />
+                </span>
+                <span className="textContainer">
+                  <span className="title">{card.title}</span>
+                  <p className="description">
+                    {card.description }
+                  </p>
+                </span>
+              </Card>
+
+            ))}
+       
       </ThreeColumnContainer>
       <DecoratorBlob />
     </Container>
