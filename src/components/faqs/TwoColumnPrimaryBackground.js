@@ -76,9 +76,9 @@ export default ({
   faqs.map((faq, index) => {
     const renderedFaq = (
       <Faq key={index} onClick={() => toggleQuestion(index)}>
-        <Question>
-          <QuestionText>{faq.question}</QuestionText>
-          <QuestionToggleIcon
+        <Question  style={{color:'#8fdff7'}}>
+          <QuestionText  style={{color:'#8fdff7'}}>{faq.question}</QuestionText>
+          <QuestionToggleIcon  style={{color:'#8fdff7'}}
             variants={{
               collapsed: { rotate: 0 },
               open: { rotate: -180 }

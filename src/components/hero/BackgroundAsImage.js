@@ -1,10 +1,8 @@
 import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
-import { css } from "styled-components/macro"; //eslint-disable-line
 
-import Header, { NavLink, NavLinks, PrimaryLink, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
-import ResponsiveVideoEmbed from "../../helpers/ResponsiveVideoEmbed.js";
+import Header, { NavLink, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
 
 const StyledHeader = styled(Header)`
   ${tw`pt-8 max-w-none`}
@@ -17,7 +15,7 @@ const StyledHeader = styled(Header)`
 `;
 const Container = styled.div`
   ${tw`relative -mx-8 -mt-8 bg-center bg-cover`}
-  background-image: url("https://images.unsplash.com/photo-1522071901873-411886a10004?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/chatbot-3cc02.appspot.com/o/header-smaller.jpg?alt=media&token=d268d2be-5c9b-4118-8a19-a8838a4b0ab6");
 `;
 
 const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-primary-500 opacity-25`;
@@ -69,15 +67,15 @@ export default () => {
 
   return (
     <Container>
-      <OpacityOverlay />
+      {/* <OpacityOverlay  /> */}
       <HeroContainer>
         {/* <StyledHeader links={navLinks} /> */}
         <TwoColumn>
           <LeftColumn>
             <Heading>
-              <span>Hire the best</span>
+              <span style={{ fontWeight:'bold' }}>Sukwini Consulting</span>
               <br />
-              <SlantedBackground>Marketing Team.</SlantedBackground>
+              <SlantedBackground  style={{color:'#8fdff7', fontSize:'2rem', fontWeight:'bold'}}>Millennial Career Coach</SlantedBackground>
             </Heading>
           </LeftColumn>
           <RightColumn>

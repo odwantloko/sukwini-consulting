@@ -11,7 +11,10 @@ import { ReactComponent as SvgDecoratorBlob3 } from "../../images/svg-decorator-
 
 import SupportIconImage from "../../images/support-icon.svg";
 import ShieldIconImage from "../../images/shield-icon.svg";
-import CustomizeIconImage from "../../images/customize-icon.svg";
+import award from "../../images/demo/award.svg";
+import cv from "../../images/demo/cv.svg";
+import users from "../../images/demo/users.svg";
+
 import FastIconImage from "../../images/fast-icon.svg";
 import ReliableIconImage from "../../images/reliable-icon.svg";
 import SimpleIconImage from "../../images/simple-icon.svg";
@@ -64,12 +67,41 @@ export default () => {
 
   const cards = [
     {
-      imageSrc: ShieldIconImage,
+      imageSrc: users,
       title: "Career Coaching",
-      description: ""
+      description: <><h2><i>One on One Career Clarity Coaching</i></h2>
+      <b>Who is it for?</b><br/>A person that requires a detailed roadmap for their career.
+      <br/><b>What would you get?</b><br/>You would get clarity on what next steps to take in your career to land your dream job.
+      <br/><br/>
+      <h2><i>Career Roadmap Coaching</i></h2>
+      <b>Who is it for?</b><br/>Job-Seekers, Graduates & Professionals 
+      <br/><b>What would you get?</b><br/>
+      <ul style={{textAlign:'Left'}}>
+        <li>•  Planning a successful Career Roadmap for the next 2 years or more</li>
+        <li>•  Creating an attractive career relevant online brand </li>
+        <li>•  Defining and achieving your career goal(s)</li>
+        <li>•  Identifying hidden talents and skills in you and monetizing them</li>
+        <li>•  Using technology and social media to fast track your career goal(s)</li>
+      </ul>
+      
+
+
+      </>
     },
-    { title: "Performance Coaching" },
-    { imageSrc: ReliableIconImage, title: "CV Restructure & personal branding" },
+    {
+      imageSrc: award,
+      title: "Performance Coaching",
+      description: <>One on One Career Clarity Coaching
+      <br/><b>Who is it for?</b><br/>A person that requires a detailed roadmap for their career.
+      <br/><b>What would you get?</b><br/>You would get clarity on what next steps to take in your career to land your dream job.
+
+
+      </>
+    },
+    { 
+      imageSrc: cv,
+      title: "CV Restructure & personal branding" 
+    }
  
   ];
 
@@ -86,7 +118,7 @@ export default () => {
               <span className="textContainer">
                 <span className="title">{card.title || "Fully Secure"}</span>
                 <p className="description">
-                  {card.description || "You can add a sentence here if you want."}
+                  {card.description }
                 </p>
               </span>
             </Card>
